@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Мастерская перспективных технологий</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,800,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style/reset.css">
+	<link href="style/style.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="wrapper-outer">
+			<div class="wrapper-inner">
+				<div class="logo-menu clearfix">
+					<div class="left-col">
+						<div class="logo">Мастерская<br>перспективных<br>технологий</div>
+					</div>
+					<div class="right-col">
+						<div class="phone-number">+7 926 525-31-08</div>
+						<nav class="header-menu">
+							<ul>
+								<li><a href="./index.html">Главная</a></li>
+							<!--<li><a href="./about.html">О нас</a></li>-->
+								<li><a href="./services.html">Услуги</a></li>
+								<li><a href="./contacts.html">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="contacts-map clearfix">
+					<div class="left-col">
+						<div class="info-block">
+							<h1 class='info-block-title'>Контакты</h1>
+							<p>Будем рады ответить на все ваши вопросы по номеру:<br> +7 926 525-31-08 или почте <a href="mailto:unicorn.rf@gmail.com">unicorn.rf@gmail.com</a>.</p>
+							<p>Наш адрес: 100000, г. Москва, ул. Вавилова, д.13, корп.7, офис 18-21.</p>
+						</div>
+					</div>
+					<div class="right-col">
+						<div id="map"></div>
+					</div>
+				</div>
+				<!--<div class="contacts-form-container">
+					<div class="info-block">
+						<h1 class='info-block-title'><span>Написать</span> нам</h1>
+						<form action="post" class='contacts-form clearfix'>
+							<div class="left-col">
+								<input type="text" id='name' name='name' placeholder='Ваше имя:'>
+								<input type="text" id='phonenumber' name='phonenumber' placeholder='Телефон:'>
+							</div>
+							<div class="right-col">
+								<textarea name="contacts-messsage" id="contacts-messsage" cols="30" rows="10" placeholder='Сообщение:'></textarea>
+							</div>
+							<div class="clear-submit">
+								<input type="button" value='Очистить' class='clearbtn'>
+								<input type="submit" value='Отправить' class='submitbtn'>
+							</div>	
+						</form>
+					</div>
+				</div>	-->
+			</div>
+		</div>	
+	</header>
+	<main>
+		<div class="wrapper-outer-advantages">
+			<div class="bkg-top"></div>
+			<div class="bkg">
+				<div class="wrapper-inner"></div>
+			</div>	
+			<div class="bkg-bottom"></div>
+		</div>
+	</main>
+	
+	<footer>
+		<div class="wrapper-outer-footer">
+			<div class="wrapper-inner">
+					<div class="logo-menu-footer clearfix">
+						<div class="left-col">
+							<div class="logo">Мастерская<br>перспективных<br>технологий</div>
+						</div>
+						<div class="right-col">
+							<nav class="footer-menu">
+								<ul>
+									<li><a href="./index.html">Главная</a></li>
+								<!--<li><a href="./about.html">О нас</a></li>-->
+									<li><a href="./services.html">Услуги</a></li>
+									<li><a href="./contacts.html">Контакты</a></li>
+								</ul>
+							</nav>
+						</div>
+				</div>
+			</div>
+		</div>	
+	</footer>
+
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="script/jquery-1.11.2.min.js"></script>
+    <script src="script/jquery.placeholder.min.js"></script>
+    <script src="script/maskedinput.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+	<script>
+	$(function() {$('input, textarea').placeholder();});
+
+    ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+
+    function init(){     
+        myMap = new ymaps.Map("map", {
+            center: [55.703292, 37.584272],
+            zoom: 13,
+            controls: []
+        });
+    myPlacemark = new ymaps.Placemark([55.703292, 37.584272], { content: 'Наш офис', balloonContent: 'Наш офис' });   
+     myMap.geoObjects.add(myPlacemark);
+    }
+
+    //Валидация телефонов и маска
+jQuery(function($){
+   $('input[name="phonenumber"]').mask("+7 (999) 999-9999");
+});
+	</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Мастерская перспективных технологий</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,800,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style/reset.css">
+	<link href="style/style.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="wrapper-outer">
+			<div class="wrapper-inner">
+				<div class="logo-menu clearfix">
+					<div class="left-col">
+						<div class="logo">Мастерская<br>перспективных<br>технологий</div>
+					</div>
+					<div class="right-col">
+						<div class="phone-number">+7 495 926 525-31-08</div>
+						<nav class="header-menu">
+							<ul>
+								<li><a href="./index.html">Главная</a></li>
+								<li><a href="./about.html">О нас</a></li>
+								<li><a href="./services.html">Услуги</a></li>
+								<li><a href="./contacts.html">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="wrapper-about-us">
+					<div class="info-block">
+						<h1 class='info-block-title'>немного <span>о нашей компании</span></h1>
+						<p>Наш архитектурный отдел создает уникальные интерьеры домашних кинотеатров. Благодаря согласованной работе с инсталляторами компании Neocinema в готовом проекте гармонично интегрировано оборудование для кинотеатров в дизайн интерьера. Мы позаботились о том, чтобы у Вас был богатый выбор элитных домашних кинотеатров и акустических систем. В нашем ассортименте оборудование для кинотеатров самых известных и надежных производителей в мире электроники. Продажа домашних кинотеатров, укомлектованных с помощью специалистов компании Neocinema, - гарантия качества работы всей системы кинозала в целом!</p>
+						<p>Все работы по подбору домашних кинотеатров, продаже домашних кинотеатров и их компонентов и инсталляции выполняются сертифицированными специалистами. Сотрудники Neocinema постоянно совершенствуют уровень своих знаний и навыков, чтобы безупречно выполнять самые сложные проекты для наших клиентов. Вы приняли решение установить оборудование для домашних кинотеатров или акустические системы Hi-End? Инсталляционная компания Neocinema осуществляет проектирование домашних кинотеатров и персональных кинозалов, предлагает своим клиентам оборудование для кинотеатров,в том числе элитные телевизоры, а так же мебель для домашних кинотеатров. Современное, высококачественное, профессиональное оборудование для кинотеатров ведущих производителей вы сможете купить, обратившись в компанию Neocinema.</p>
+					</div>	
+				</div>	
+			</div>
+		</div>	
+	</header>
+	<main>
+		<div class="wrapper-outer-advantages">
+			<div class="bkg-top"></div>
+			<div class="bkg">
+				<div class="wrapper-inner"></div>
+			</div>	
+			<div class="bkg-bottom"></div>
+		</div>
+	</main>
+	
+	<footer>
+		<div class="wrapper-outer-footer">
+			<div class="wrapper-inner">
+					<div class="logo-menu-footer clearfix">
+						<div class="left-col">
+							<div class="logo">Мастерская<br>перспективных<br>технологий</div>
+						</div>
+						<div class="right-col">
+							<nav class="footer-menu">
+								<ul>
+									<li><a href="./index.html">Главная</a></li>
+									<li><a href="./about.html">О нас</a></li>
+									<li><a href="./services.html">Услуги</a></li>
+									<li><a href="./contacts.html">Контакты</a></li>
+								</ul>
+							</nav>
+						</div>
+				</div>
+			</div>
+		</div>	
+	</footer>
+
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="script/jquery-1.11.2.min.js"></script>
+    <script src="script/jquery.placeholder.min.js"></script>
+    <script src="script/maskedinput.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+	<script>
+	$(function() {$('input, textarea').placeholder();});
+
+    ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+
+    function init(){     
+        myMap = new ymaps.Map("map", {
+            center: [55.76, 37.64],
+            zoom: 13,
+            controls: []
+        });
+    }
+
+    //Валидация телефонов и маска
+jQuery(function($){
+   $('input[name="phonenumber"]').mask("+7 (999) 999-9999");
+});
+	</script>
+</body>
+</html>
